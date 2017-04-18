@@ -1,0 +1,27 @@
+{
+    "name": "fei/translate-package",
+    "description": "Translate client package integration for Objective PHP applications",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Anaëlle Baumann",
+            "email": "aba@opcoding.eu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Fei\\Service\\Translate\\Package\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.flash-global.net"
+        }
+    ],
+    "require": {
+        "objective-php/application": "^1.0",
+        "fei/translate-client": "~1.0"
+    }
+}
