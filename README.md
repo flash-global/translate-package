@@ -27,7 +27,7 @@ class Application extends AbstractApplication
     {
         // Define some application steps
         $this->addSteps('bootstrap', 'init', 'auth', 'route', 'rendering');
-        
+
         // Initializations...
 
         // Plugging the Translate Package in the bootstrap step
@@ -64,6 +64,7 @@ return [
         'url' => 'http://translate.domain.dev/handleRequest.php'
     ]),// Translate client config (Cf. Translate Client documentation)
     new TranslateParam('translate_namespace', '/mynamespace') // Namespace defined in translate_config where to search the translations
+    new TranslateParam('translate_lang', 'en_GB') // Language defined in which we want the translations
 ];
 ```
 
@@ -74,5 +75,6 @@ In the previous example you need to set this configuration:
 * `translate_directory` : represent the path to the directory to store the translations
 * `translate_config` : represent the translate client configuration (Cf. `translate-client` documentation)
 * `translate_namespace` : represent the default namespace where to search the translations
+* `translate_lang` : represent the default language in which we want the translations
 
 Please check out `translate-client` documentation for more information about how to use this client.

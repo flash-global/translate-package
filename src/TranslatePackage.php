@@ -35,18 +35,28 @@ class TranslatePackage
             mkdir($params->get('translate_directory'), 0755);
         }
 
-        $app->getServicesFactory()->registerService(
-            [
-                'id' => 'translate.client',
-                'class' => Translate::class,
-                'params' => [
-                    [Translate::OPTION_BASEURL => $params->get('base_url')],
-                    $params->get('translate_config')
-                ],
-                'setters' => [
-                    'setTransport' => $params->get('transport')
-                ]
+        $service = [
+            'id' => 'translate.client',
+            'class' => Translate::class,
+            'params' => [
+                [Translate::OPTION_BASEURL => $params->get('base_url')],
+                $params->get('translate_config')
+            ],
+            'setters' => [
+                'setTransport' => $params->get('transport'),
             ]
-        );
+        ];
+
+        // setting the default language if it is set
+        if ($params->get('translate_lang')) {
+            $service['setters']['setLang'] = $params->get('translate_lang');
+        }
+
+        // setting the default namespace if it is set
+        if ($params->get('translate_namespace')) {
+            $service['setters']['setDomain'] = $params->get('translate_namespace');
+        }
+
+        $app->getServicesFactory()->registerService($service);
     }
 }
