@@ -17,13 +17,17 @@ class TranslatePackage
     /** @var string */
     protected $identifier;
 
+    /** @var string */
+    protected $class;
+
     /**
      * LoggerClientPackage constructor.
      * @param string $serviceIdentifier
      */
-    public function __construct(string $serviceIdentifier = self::DEFAULT_IDENTIFIER)
+    public function __construct(string $serviceIdentifier = self::DEFAULT_IDENTIFIER, string $class = Translate::class)
     {
         $this->identifier = $serviceIdentifier;
+        $this->class = $class;
     }
 
     public function __invoke(ApplicationInterface $app)
@@ -37,7 +41,7 @@ class TranslatePackage
 
         $service = [
             'id' => 'translate.client',
-            'class' => Translate::class,
+            'class' => $this->class,
             'params' => [
                 [Translate::OPTION_BASEURL => $params->get('base_url')],
                 $params->get('translate_config')
