@@ -78,3 +78,4 @@ In the previous example you need to set this configuration:
 * `translate_lang` : represent the default language in which we want the translations
 
 Please check out `translate-client` documentation for more information about how to use this client.
+
