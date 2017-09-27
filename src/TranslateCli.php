@@ -25,8 +25,8 @@ class TranslateCli extends AbstractCliAction
             'File where the translations are stored'
         ));
         $this->expects(new Param(
-            ['l' => 'language'],
-            'The language of translations'
+            ['l' => 'lang'],
+            'The lang of translations'
         ));
     }
 
@@ -42,21 +42,20 @@ class TranslateCli extends AbstractCliAction
         /** @var Translate $translate */
         $translate = $app->getServicesFactory()->get('translate.client');
         $translations = $this->getParam('translations');
-        $language = $this->getParam('language');
+        $lang = $this->getParam('lang');
 
         if (!is_file($translations)) {
             throw new TranslateException('Translation file `' . $translations . '` not found!', 404);
         }
 
+        if (empty($lang)) {
+            throw new TranslateException('Missing parameter lang', 500);
+        }
+
         $translations = require $translations;
 
         $namespace = $app->getConfig()->subset(TranslateParam::class)->get('translate_namespace');
-        $lang = $app->getConfig()->subset(TranslateParam::class)->get('translate_lang');
         $lock = $app->getConfig()->subset(TranslateParam::class)->get('translate_config')['lock_file'] ?? null;
-
-        if (!empty($language)) {
-            $lang = $language;
-        }
 
         $updates = [];
         $stores = [];
