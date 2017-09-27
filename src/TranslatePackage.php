@@ -5,6 +5,7 @@ namespace Fei\Service\Translate\Package;
 use Fei\Service\Translate\Client\Translate;
 use Fei\Service\Translate\Package\Config\TranslateParam;
 use ObjectivePHP\Application\ApplicationInterface;
+use ObjectivePHP\Cli\Config\CliCommand;
 
 /**
  * Class TranslatePackage
@@ -33,7 +34,7 @@ class TranslatePackage
     public function __invoke(ApplicationInterface $app)
     {
         $params = $app->getConfig()->subset(TranslateParam::class);
-
+        $app->getConfig()->import(new CliCommand(new TranslateCli()));
         // Create translate directory
         if (!is_dir($params->get('translate_directory'))) {
             mkdir($params->get('translate_directory'), 0755);
