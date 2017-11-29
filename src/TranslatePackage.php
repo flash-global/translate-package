@@ -2,6 +2,8 @@
 
 namespace Fei\Service\Translate\Package;
 
+use Fei\Service\Connect\Client\Connect;
+use Fei\Service\Connect\Common\Entity\User;
 use Fei\Service\Translate\Client\Translate;
 use Fei\Service\Translate\Package\Config\TranslateParam;
 use ObjectivePHP\Application\ApplicationInterface;
@@ -20,6 +22,9 @@ class TranslatePackage
 
     /** @var string */
     protected $class;
+
+    /** @var string */
+    protected $connectClientIdentifier = 'connect.client';
 
     /**
      * LoggerClientPackage constructor.
@@ -41,7 +46,7 @@ class TranslatePackage
         }
 
         $service = [
-            'id' => 'translate.client',
+            'id' => $this->identifier,
             'class' => $this->class,
             'params' => [
                 [Translate::OPTION_BASEURL => $params->get('base_url')],
@@ -52,8 +57,13 @@ class TranslatePackage
             ]
         ];
 
-        // setting the default language if it is set
-        if ($params->get('translate_lang')) {
+        if ($app->getServicesFactory()->has($this->connectClientIdentifier)) {
+            /** @var Connect $client */
+            $client = $app->getServicesFactory()->get($this->connectClientIdentifier);
+            if ($client->getUser() instanceof User) {
+                $service['setters']['setLang'] = $client->getUser()->getLanguage();
+            }
+        } else if ($params->get('translate_lang')) {
             $service['setters']['setLang'] = $params->get('translate_lang');
         }
 
@@ -63,5 +73,29 @@ class TranslatePackage
         }
 
         $app->getServicesFactory()->registerService($service);
+    }
+
+    /**
+     * Get ConnectClientIdentifier
+     *
+     * @return string
+     */
+    public function getConnectClientIdentifier(): string
+    {
+        return $this->connectClientIdentifier;
+    }
+
+    /**
+     * Set ConnectClientIdentifier
+     *
+     * @param string $connectClientIdentifier
+     *
+     * @return $this
+     */
+    public function setConnectClientIdentifier(string $connectClientIdentifier)
+    {
+        $this->connectClientIdentifier = $connectClientIdentifier;
+
+        return $this;
     }
 }
