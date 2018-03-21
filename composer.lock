@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3064aebfb772ba6919843d13093985f9",
+    "content-hash": "12aecf39fba3556ca0fe7583e8bc8714",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -586,7 +586,7 @@
             "version": "v1.2.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/api-client.git",
+                "url": "https://github.com/flash-global/api-client.git",
                 "reference": "f8a3c07192016e549b76bb2898bd7776c4458f12"
             },
             "dist": {
@@ -628,7 +628,7 @@
             "version": "v2.1.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/connect-client.git",
+                "url": "https://github.com/flash-global/connect-client.git",
                 "reference": "2de875f215757c8060b9cc87d81fb68b23eeac66"
             },
             "dist": {
@@ -676,7 +676,7 @@
             "version": "v2.1.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/connect-common.git",
+                "url": "https://github.com/flash-global/connect-common.git",
                 "reference": "d2b939daa2eb06c78ac99bc4b539d983e35ef1df"
             },
             "dist": {
@@ -758,7 +758,7 @@
             "version": "v1.2.10",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/logger-client.git",
+                "url": "https://github.com/flash-global/logger-client.git",
                 "reference": "d595396984abf9b3297e98cec42a43f58f397e09"
             },
             "dist": {
@@ -801,7 +801,7 @@
             "version": "v1.2.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/logger-common.git",
+                "url": "https://github.com/flash-global/logger-common.git",
                 "reference": "b8180c0d73cfbb17faf7e7fb518d9a0da776b8a4"
             },
             "dist": {
@@ -844,17 +844,17 @@
         },
         {
             "name": "fei/translate-client",
-            "version": "v1.0.6",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:flash-global/translate-client.git",
-                "reference": "b1bd76b306ee335de78189e75cddfd236107e626"
+                "reference": "384dfd0a7065390fdd1b41d5f8bc19a4e9bb1abb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-translate-client-b1bd76b306ee335de78189e75cddfd236107e626-zip-ec3c97.zip",
-                "reference": "b1bd76b306ee335de78189e75cddfd236107e626",
-                "shasum": "3462812d5136d90aec5eed407fc9a952decf32b9"
+                "url": "https://composer.flash-global.net/dist/fei-translate-client-384dfd0a7065390fdd1b41d5f8bc19a4e9bb1abb-zip-1ccb3d.zip",
+                "reference": "384dfd0a7065390fdd1b41d5f8bc19a4e9bb1abb",
+                "shasum": "e42334b304121f93bf3526199fafce630c5a8b3f"
             },
             "require": {
                 "doctrine/common": "^2.6.1",
@@ -895,10 +895,10 @@
             ],
             "description": "Flash applicative Translate - client component",
             "support": {
-                "source": "https://github.com/flash-global/translate-client/tree/v1.0.6",
+                "source": "https://github.com/flash-global/translate-client/tree/master",
                 "issues": "https://github.com/flash-global/translate-client/issues"
             },
-            "time": "2017-05-19T10:37:38+00:00"
+            "time": "2018-03-19T09:19:56+00:00"
         },
         {
             "name": "fei/translate-common",
