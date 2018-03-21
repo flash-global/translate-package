@@ -17,12 +17,12 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://composer.flash-global.net"
+            "url": "https://composer.flash.global"
         }
     ],
     "require": {
         "objective-php/application": "^1.0",
-        "fei/translate-client": "~1.0",
+        "fei/translate-client": "^1.0",
         "fei/connect-client": "^2.1",
         "objective-php/cli" : "~1.1.0"
     }
