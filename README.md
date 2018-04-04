@@ -56,6 +56,8 @@ return [
         'lock_file'         => '/app/translate/.translations.lock',
         'data_path'         => '/app/translate/data',
         'translations_path' => '/app/translate/translations',
+        'localTranslationsFile' => dirname(__DIR__) . 'localTranslations',
+        'skipSubscription' => false,
         'servers'           => [
             'http://translate.api/' => [
                 'namespaces' => ['/mynamespace']
