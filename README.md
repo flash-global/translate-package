@@ -56,7 +56,7 @@ return [
         'lock_file'         => '/app/translate/.translations.lock',
         'data_path'         => '/app/translate/data',
         'translations_path' => '/app/translate/translations',
-        'localTranslationsFile' => dirname(__DIR__) . 'localTranslations',
+        'localTranslationsFile' => dirname(__DIR__) . '/localTranslations.php',
         'skipSubscription' => false,
         'servers'           => [
             'http://translate.api/' => [
@@ -78,6 +78,21 @@ In the previous example you need to set this configuration:
 * `translate_config` : represent the translate client configuration (Cf. `translate-client` documentation)
 * `translate_namespace` : represent the default namespace where to search the translations
 * `translate_lang` : represent the default language in which we want the translations
+
+Note that if you want your application to use local translations and not subscribe to a Translate server you can configure your application like this:
+
+```php
+<?php
+
+use Fei\Service\Translate\Package\Config\TranslateParam;
+
+return [
+    new TranslateParam('translate_config', [
+        'localTranslationsFile' => dirname(__DIR__) . '/localTranslations.php',
+        'skipSubscription' => true,
+    ]),
+];
+```
 
 Please check out `translate-client` documentation for more information about how to use this client.
 

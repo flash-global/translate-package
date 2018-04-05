@@ -3,6 +3,8 @@
 namespace Fei\Service\Translate\Package;
 
 use Codeception\Lib\Notification;
+use Fei\ApiClient\Transport\BasicTransport;
+use Fei\ApiClient\Transport\SyncTransportInterface;
 use Fei\Service\Connect\Client\Connect;
 use Fei\Service\Connect\Common\Entity\User;
 use Fei\Service\Translate\Client\Translate;
@@ -68,7 +70,8 @@ class TranslatePackage
                     $params->get('translate_config')
                 );
 
-                $translate->setTransport($params->get('transport'));
+                $transport = $params->get('transport') instanceof SyncTransportInterface ? $params->get('transport') : new BasicTransport();
+                $translate->setTransport($transport);
 
                 if ($servicesFactory->has($this->logger)) {
                     $translate->setLogger($servicesFactory->get($this->logger));
