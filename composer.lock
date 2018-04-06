@@ -844,17 +844,17 @@
         },
         {
             "name": "fei/translate-client",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:flash-global/translate-client.git",
-                "reference": "384dfd0a7065390fdd1b41d5f8bc19a4e9bb1abb"
+                "reference": "1cad3df6f1c9e2401595e96bc7a119bc440bbfb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-translate-client-384dfd0a7065390fdd1b41d5f8bc19a4e9bb1abb-zip-1ccb3d.zip",
-                "reference": "384dfd0a7065390fdd1b41d5f8bc19a4e9bb1abb",
-                "shasum": "e42334b304121f93bf3526199fafce630c5a8b3f"
+                "url": "https://composer.flash-global.net/dist/fei-translate-client-1cad3df6f1c9e2401595e96bc7a119bc440bbfb3-zip-51ca64.zip",
+                "reference": "1cad3df6f1c9e2401595e96bc7a119bc440bbfb3",
+                "shasum": "8a131efa48b0987d3808497beb6e82f24c67db0c"
             },
             "require": {
                 "doctrine/common": "^2.6.1",
@@ -898,7 +898,7 @@
                 "source": "https://github.com/flash-global/translate-client/tree/master",
                 "issues": "https://github.com/flash-global/translate-client/issues"
             },
-            "time": "2018-03-19T09:19:56+00:00"
+            "time": "2018-04-06T13:45:38+00:00"
         },
         {
             "name": "fei/translate-common",
