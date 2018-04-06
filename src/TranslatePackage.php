@@ -55,7 +55,7 @@ class TranslatePackage
             try {
                 mkdir($params->get('translate_directory'), 0755, true);
             } catch(\Exception $e) {
-                if ($app->getServicesFactory(->has($this->logger)) {
+                if ($app->getServicesFactory()->has($this->logger)) {
                     $logger = $app->getServicesFactory()->get($this->logger);
                     $logger->notify($e->getMessage());
                 }
