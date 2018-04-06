@@ -60,12 +60,13 @@ return [
         'skipSubscription' => false,
         'servers'           => [
             'http://translate.api/' => [
-                'namespaces' => ['/mynamespace']
+                'namespaces' => ['/mynamespace'],
+                'host' => 'other-host'
             ]
         ],
         'url' => 'http://translate.domain.dev/handleRequest.php'
     ]),// Translate client config (Cf. Translate Client documentation)
-    new TranslateParam('translate_namespace', '/mynamespace') // Namespace defined in translate_config where to search the translations
+    new TranslateParam('translate_namespace', '/mynamespace'), // Namespace defined in translate_config where to search the translations
     new TranslateParam('translate_lang', 'en_GB') // Language defined in which we want the translations
 ];
 ```
