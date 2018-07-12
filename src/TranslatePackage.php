@@ -2,12 +2,15 @@
 
 namespace Fei\Service\Translate\Package;
 
+use Fei\ApiClient\Transport\BasicTransport;
+use Fei\ApiClient\Transport\SyncTransportInterface;
 use Fei\Service\Connect\Client\Connect;
 use Fei\Service\Connect\Common\Entity\User;
 use Fei\Service\Translate\Client\Translate;
 use Fei\Service\Translate\Package\Config\TranslateParam;
 use ObjectivePHP\Application\ApplicationInterface;
 use ObjectivePHP\Cli\Config\CliCommand;
+use ObjectivePHP\ServicesFactory\ServicesFactory;
 
 /**
  * Class TranslatePackage
@@ -26,12 +29,19 @@ class TranslatePackage
     /** @var string */
     protected $connectClientIdentifier = 'connect.client';
 
+    /** @var string */
+    protected $logger;
+
     /**
      * LoggerClientPackage constructor.
      * @param string $serviceIdentifier
      */
-    public function __construct(string $serviceIdentifier = self::DEFAULT_IDENTIFIER, string $class = Translate::class)
-    {
+    public function __construct(
+        string $serviceIdentifier = self::DEFAULT_IDENTIFIER,
+        string $class = Translate::class,
+        string $logger = 'logger.client'
+    ) {
+        $this->logger = $logger;
         $this->identifier = $serviceIdentifier;
         $this->class = $class;
     }
@@ -40,37 +50,58 @@ class TranslatePackage
     {
         $params = $app->getConfig()->subset(TranslateParam::class);
         $app->getConfig()->import(new CliCommand(new TranslateCli()));
+
         // Create translate directory
         if (!is_dir($params->get('translate_directory'))) {
-            mkdir($params->get('translate_directory'), 0755);
+            try {
+                mkdir($params->get('translate_directory'), 0755, true);
+            } catch (\Exception $e) {
+                if ($app->getServicesFactory()->has($this->logger)) {
+                    $logger = $app->getServicesFactory()->get($this->logger);
+                    $logger->notify($e->getMessage());
+                }
+            }
         }
 
         $service = [
             'id' => $this->identifier,
-            'class' => $this->class,
-            'params' => [
-                [Translate::OPTION_BASEURL => $params->get('base_url')],
-                $params->get('translate_config')
-            ],
-            'setters' => [
-                'setTransport' => $params->get('transport'),
-            ]
+            'alias' => Translate::class,
+            'factory' => function (string $id, ServicesFactory $servicesFactory) use ($params) {
+
+                /** @var Translate $translate */
+                $translate = new $this->class(
+                    [Translate::OPTION_BASEURL => $params->get('base_url')],
+                    $params->get('translate_config')
+                );
+
+                $transport = $params->get('transport') instanceof SyncTransportInterface
+                    ? $params->get('transport')
+                    : new BasicTransport();
+
+                $translate->setTransport($transport);
+
+                if ($servicesFactory->has($this->logger)) {
+                    $translate->setLogger($servicesFactory->get($this->logger));
+                }
+
+                if ($servicesFactory->has($this->connectClientIdentifier)) {
+                    /** @var Connect $client */
+                    $client = $servicesFactory->get($this->connectClientIdentifier);
+                    if ($client->getUser() instanceof User) {
+                        $translate->setLang($client->getUser()->getLanguage());
+                    }
+                } elseif ($params->get('translate_lang')) {
+                    $translate->setLang($params->get('translate_lang'));
+                }
+
+                // setting the default namespace if it is set
+                if ($params->get('translate_namespace')) {
+                    $translate->setDomain($params->get('translate_namespace'));
+                }
+
+                return $translate;
+            },
         ];
-
-        if ($app->getServicesFactory()->has($this->connectClientIdentifier)) {
-            /** @var Connect $client */
-            $client = $app->getServicesFactory()->get($this->connectClientIdentifier);
-            if ($client->getUser() instanceof User) {
-                $service['setters']['setLang'] = $client->getUser()->getLanguage();
-            }
-        } else if ($params->get('translate_lang')) {
-            $service['setters']['setLang'] = $params->get('translate_lang');
-        }
-
-        // setting the default namespace if it is set
-        if ($params->get('translate_namespace')) {
-            $service['setters']['setDomain'] = $params->get('translate_namespace');
-        }
 
         $app->getServicesFactory()->registerService($service);
     }

@@ -9,5 +9,4 @@ use ObjectivePHP\Config\SingleValueDirectiveGroup;
  */
 class TranslateParam extends SingleValueDirectiveGroup
 {
-
 }

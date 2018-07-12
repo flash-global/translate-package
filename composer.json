@@ -24,6 +24,6 @@
         "objective-php/application": "^1.0",
         "fei/translate-client": "^1.0",
         "fei/connect-client": "^2.1",
-        "objective-php/cli" : "~1.1.0"
+        "objective-php/cli" : "^1.2"
     }
 }
