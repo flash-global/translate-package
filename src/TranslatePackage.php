@@ -2,7 +2,6 @@
 
 namespace Fei\Service\Translate\Package;
 
-use Codeception\Lib\Notification;
 use Fei\ApiClient\Transport\BasicTransport;
 use Fei\ApiClient\Transport\SyncTransportInterface;
 use Fei\Service\Connect\Client\Connect;
@@ -11,7 +10,6 @@ use Fei\Service\Translate\Client\Translate;
 use Fei\Service\Translate\Package\Config\TranslateParam;
 use ObjectivePHP\Application\ApplicationInterface;
 use ObjectivePHP\Cli\Config\CliCommand;
-use ObjectivePHP\ServicesFactory\ServiceReference;
 use ObjectivePHP\ServicesFactory\ServicesFactory;
 
 /**
@@ -38,8 +36,11 @@ class TranslatePackage
      * LoggerClientPackage constructor.
      * @param string $serviceIdentifier
      */
-    public function __construct(string $serviceIdentifier = self::DEFAULT_IDENTIFIER, string $class = Translate::class, string $logger = 'logger.client')
-    {
+    public function __construct(
+        string $serviceIdentifier = self::DEFAULT_IDENTIFIER,
+        string $class = Translate::class,
+        string $logger = 'logger.client'
+    ) {
         $this->logger = $logger;
         $this->identifier = $serviceIdentifier;
         $this->class = $class;
@@ -54,7 +55,7 @@ class TranslatePackage
         if (!is_dir($params->get('translate_directory'))) {
             try {
                 mkdir($params->get('translate_directory'), 0755, true);
-            } catch(\Exception $e) {
+            } catch (\Exception $e) {
                 if ($app->getServicesFactory()->has($this->logger)) {
                     $logger = $app->getServicesFactory()->get($this->logger);
                     $logger->notify($e->getMessage());
@@ -72,7 +73,10 @@ class TranslatePackage
                     $params->get('translate_config')
                 );
 
-                $transport = $params->get('transport') instanceof SyncTransportInterface ? $params->get('transport') : new BasicTransport();
+                $transport = $params->get('transport') instanceof SyncTransportInterface
+                    ? $params->get('transport')
+                    : new BasicTransport();
+
                 $translate->setTransport($transport);
 
                 if ($servicesFactory->has($this->logger)) {
@@ -85,7 +89,7 @@ class TranslatePackage
                     if ($client->getUser() instanceof User) {
                         $translate->setLang($client->getUser()->getLanguage());
                     }
-                } else if ($params->get('translate_lang')) {
+                } elseif ($params->get('translate_lang')) {
                     $translate->setLang($params->get('translate_lang'));
                 }
 
