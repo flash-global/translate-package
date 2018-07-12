@@ -65,6 +65,7 @@ class TranslatePackage
 
         $service = [
             'id' => $this->identifier,
+            'alias' => Translate::class,
             'factory' => function (string $id, ServicesFactory $servicesFactory) use ($params) {
 
                 /** @var Translate $translate */
