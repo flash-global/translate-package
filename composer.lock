@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12aecf39fba3556ca0fe7583e8bc8714",
+    "content-hash": "bfecb0ad231b6c73d79874ad328f07fd",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -591,7 +591,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-api-client-f8a3c07192016e549b76bb2898bd7776c4458f12-zip-415085.zip",
+                "url": "https://composer.flash.global/dist/fei-api-client-f8a3c07192016e549b76bb2898bd7776c4458f12-zip-415085.zip",
                 "reference": "f8a3c07192016e549b76bb2898bd7776c4458f12",
                 "shasum": "dbac45051de3797264bfc6302882ede5324f91b7"
             },
@@ -633,7 +633,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-connect-client-2de875f215757c8060b9cc87d81fb68b23eeac66-zip-cc0929.zip",
+                "url": "https://composer.flash.global/dist/fei-connect-client-2de875f215757c8060b9cc87d81fb68b23eeac66-zip-cc0929.zip",
                 "reference": "2de875f215757c8060b9cc87d81fb68b23eeac66",
                 "shasum": "8f6054205e85eacda9b2a48d86beacf629c8d5d0"
             },
@@ -681,7 +681,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-connect-common-d2b939daa2eb06c78ac99bc4b539d983e35ef1df-zip-a65d12.zip",
+                "url": "https://composer.flash.global/dist/fei-connect-common-d2b939daa2eb06c78ac99bc4b539d983e35ef1df-zip-a65d12.zip",
                 "reference": "d2b939daa2eb06c78ac99bc4b539d983e35ef1df",
                 "shasum": "5610c57007c4a2d5a0bcf2d9847ad4fd08fdb2c9"
             },
@@ -724,7 +724,7 @@
             "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/entities.git",
+                "url": "https://github.com/flash-global/entities.git",
                 "reference": "21eeb9dee1c43dc1520228d41aea8d5bc2b305ef"
             },
             "dist": {
@@ -763,7 +763,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-logger-client-d595396984abf9b3297e98cec42a43f58f397e09-zip-cf4d40.zip",
+                "url": "https://composer.flash.global/dist/fei-logger-client-d595396984abf9b3297e98cec42a43f58f397e09-zip-cf4d40.zip",
                 "reference": "d595396984abf9b3297e98cec42a43f58f397e09",
                 "shasum": "f824f688bbef92af6adffc403d70ad76ee5d8076"
             },
@@ -806,7 +806,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-logger-common-b8180c0d73cfbb17faf7e7fb518d9a0da776b8a4-zip-f9a158.zip",
+                "url": "https://composer.flash.global/dist/fei-logger-common-b8180c0d73cfbb17faf7e7fb518d9a0da776b8a4-zip-f9a158.zip",
                 "reference": "b8180c0d73cfbb17faf7e7fb518d9a0da776b8a4",
                 "shasum": "60da45afcaefc72f9fd859af42a85638db2243ea"
             },
@@ -847,12 +847,12 @@
             "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/translate-client.git",
+                "url": "https://github.com/flash-global/translate-client.git",
                 "reference": "1cad3df6f1c9e2401595e96bc7a119bc440bbfb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-translate-client-1cad3df6f1c9e2401595e96bc7a119bc440bbfb3-zip-51ca64.zip",
+                "url": "https://composer.flash.global/dist/fei-translate-client-1cad3df6f1c9e2401595e96bc7a119bc440bbfb3-zip-51ca64.zip",
                 "reference": "1cad3df6f1c9e2401595e96bc7a119bc440bbfb3",
                 "shasum": "8a131efa48b0987d3808497beb6e82f24c67db0c"
             },
@@ -905,12 +905,12 @@
             "version": "v1.0.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/translate-common.git",
+                "url": "https://github.com/flash-global/translate-common.git",
                 "reference": "4beca7c1007571a5fbb0c81580bf65978de32c25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-translate-common-4beca7c1007571a5fbb0c81580bf65978de32c25-zip-5cc6e8.zip",
+                "url": "https://composer.flash.global/dist/fei-translate-common-4beca7c1007571a5fbb0c81580bf65978de32c25-zip-5cc6e8.zip",
                 "reference": "4beca7c1007571a5fbb0c81580bf65978de32c25",
                 "shasum": "66c09b249a1e3da60b5713b2c0abbc231e3c60b9"
             },
@@ -943,6 +943,10 @@
             "keywords": [
                 "translate"
             ],
+            "support": {
+                "source": "https://github.com/flash-global/translate-common/tree/v1.0.4",
+                "issues": "https://github.com/flash-global/translate-common/issues"
+            },
             "time": "2018-01-10T13:19:54+00:00"
         },
         {
@@ -1404,16 +1408,16 @@
         },
         {
             "name": "objective-php/cli",
-            "version": "v1.1.3",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/objective-php/cli.git",
-                "reference": "34859fc348b9dd86884049b46458c2938ca31539"
+                "reference": "97e680b200986123b69bbd1031f30c573b072bc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/objective-php/cli/zipball/34859fc348b9dd86884049b46458c2938ca31539",
-                "reference": "34859fc348b9dd86884049b46458c2938ca31539",
+                "url": "https://api.github.com/repos/objective-php/cli/zipball/97e680b200986123b69bbd1031f30c573b072bc1",
+                "reference": "97e680b200986123b69bbd1031f30c573b072bc1",
                 "shasum": ""
             },
             "require": {
@@ -1448,7 +1452,7 @@
                 "cli",
                 "objective php"
             ],
-            "time": "2017-09-29T07:17:59+00:00"
+            "time": "2018-01-16T11:28:41+00:00"
         },
         {
             "name": "objective-php/components",
