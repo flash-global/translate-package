@@ -16,8 +16,12 @@
     },
     "repositories": [
         {
-            "type": "composer",
-            "url": "https://composer.flash.global"
+            "type" : "git",
+            "url" : "git@github.com:flash-global/translate-client"
+        },
+        {
+            "type" : "git",
+            "url" : "git@github.com:flash-global/connect-client"
         }
     ],
     "require": {
