@@ -1,11 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "49b17204584d98536bd13f310c694a0f",
-    "content-hash": "0f917278afafa7e30211effed975d3e1",
+    "content-hash": "ca7dde6f147b9725fef6976e7a42099d",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -36,7 +35,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
-            "time": "2017-02-14 19:40:03"
+            "time": "2017-02-14T19:40:03+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -104,7 +103,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2017-02-24 16:22:25"
+            "time": "2017-02-24T16:22:25+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -174,7 +173,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2017-07-22 12:49:21"
+            "time": "2017-07-22T12:49:21+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -241,7 +240,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2017-01-03 10:49:41"
+            "time": "2017-01-03T10:49:41+00:00"
         },
         {
             "name": "doctrine/common",
@@ -314,7 +313,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2017-07-22 08:35:12"
+            "time": "2017-07-22T08:35:12+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -381,7 +380,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2017-07-22 12:18:28"
+            "time": "2017-07-22T12:18:28+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -435,20 +434,20 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09 13:34:57"
+            "time": "2014-09-09T13:34:57+00:00"
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.5",
+            "version": "2.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "54859fabea8b3beecbb1a282888d5c990036b9e3"
+                "reference": "709f21f92707308cdf8f9bcfa1af4cb26586521e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/54859fabea8b3beecbb1a282888d5c990036b9e3",
-                "reference": "54859fabea8b3beecbb1a282888d5c990036b9e3",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/709f21f92707308cdf8f9bcfa1af4cb26586521e",
+                "reference": "709f21f92707308cdf8f9bcfa1af4cb26586521e",
                 "shasum": ""
             },
             "require": {
@@ -492,7 +491,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-08-16 20:49:45"
+            "time": "2018-12-04T22:38:24+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -538,7 +537,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2018-03-08 01:11:30"
+            "time": "2018-03-08T01:11:30+00:00"
         },
         {
             "name": "erusev/parsedown-extra",
@@ -582,20 +581,20 @@
                 "parsedown",
                 "parser"
             ],
-            "time": "2015-11-01 10:19:22"
+            "time": "2015-11-01T10:19:22+00:00"
         },
         {
             "name": "fei/api-client",
-            "version": "v1.2.7",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flash-global/api-client.git",
-                "reference": "0e0911feccf62d6c1c00c51d3a14cc989151d252"
+                "reference": "f925992cbda504a466a8cb36f0e7f509a4a5b53f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flash-global/api-client/zipball/0e0911feccf62d6c1c00c51d3a14cc989151d252",
-                "reference": "0e0911feccf62d6c1c00c51d3a14cc989151d252",
+                "url": "https://api.github.com/repos/flash-global/api-client/zipball/f925992cbda504a466a8cb36f0e7f509a4a5b53f",
+                "reference": "f925992cbda504a466a8cb36f0e7f509a4a5b53f",
                 "shasum": ""
             },
             "require": {
@@ -606,6 +605,8 @@
             "require-dev": {
                 "codeception/aspect-mock": "*",
                 "codeception/codeception": "^2.2",
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "phpro/grumphp": "^0.14.2",
                 "squizlabs/php_codesniffer": "3.*"
             },
             "bin": [
@@ -615,6 +616,59 @@
             "autoload": {
                 "psr-4": {
                     "Fei\\ApiClient\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Yoctu",
+                    "email": "contact@yoctu.com",
+                    "homepage": "http://yoctu.com/"
+                }
+            ],
+            "description": "Client side API helpers",
+            "support": {
+                "source": "https://github.com/flash-global/api-client/tree/v1.3.1",
+                "issues": "https://github.com/flash-global/api-client/issues"
+            },
+            "time": "2018-09-20T15:13:53+00:00"
+        },
+        {
+            "name": "fei/connect-client",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:flash-global/connect-client",
+                "reference": "593d2db0a55c271ec4827e001cdb0e24d1269751"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flash-global/connect-client/zipball/593d2db0a55c271ec4827e001cdb0e24d1269751",
+                "reference": "593d2db0a55c271ec4827e001cdb0e24d1269751",
+                "shasum": ""
+            },
+            "require": {
+                "fei/api-client": "^1.3",
+                "fei/connect-common": "^3.0.0",
+                "lightsaml/lightsaml": "^1.2",
+                "nikic/fast-route": "^1.0",
+                "php": ">=7.0",
+                "psr/simple-cache": "^1.0",
+                "zendframework/zend-cache": "^2.7",
+                "zendframework/zend-diactoros": "^1.3"
+            },
+            "require-dev": {
+                "codeception/codeception": "^2.3",
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "phpro/grumphp": "^0.14.1",
+                "squizlabs/php_codesniffer": "^3.2"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Fei\\Service\\Connect\\Client\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -628,63 +682,21 @@
                     "homepage": "http://yoctu.com/"
                 }
             ],
-            "description": "Client side API helpers",
-            "time": "2018-03-15 16:08:51"
-        },
-        {
-            "name": "fei/connect-client",
-            "version": "v2.2.3",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:flash-global/connect-client",
-                "reference": "429f2c53d5fc2ab10bef2ee22bc8132b2dc8dfa2"
-            },
-            "require": {
-                "fei/api-client": "~1.2.0",
-                "fei/connect-common": "~2.2.0",
-                "lightsaml/lightsaml": "^1.2",
-                "nikic/fast-route": "^1.0",
-                "php": ">=5.5",
-                "psr/simple-cache": "^1.0",
-                "zendframework/zend-cache": "^2.7",
-                "zendframework/zend-diactoros": "^1.3"
-            },
-            "require-dev": {
-                "codeception/codeception": "^2.3",
-                "phpunit/phpunit": "~4.8",
-                "squizlabs/php_codesniffer": "^3.2"
-            },
-            "type": "project",
-            "autoload": {
-                "psr-4": {
-                    "Fei\\Service\\Connect\\Client\\": "src"
-                }
-            },
-            "license": [
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Yoctu",
-                    "email": "contact@yoctu.com",
-                    "homepage": "http://yoctu.com/"
-                }
-            ],
             "description": "Yoctu Connect Client - Service Provider",
-            "time": "2018-04-13 13:10:00"
+            "time": "2018-09-27T08:36:21+00:00"
         },
         {
             "name": "fei/connect-common",
-            "version": "v2.2.4",
+            "version": "v3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flash-global/connect-common.git",
-                "reference": "6df0bb2501833cbfbc8f1e6267427e0767e703b5"
+                "reference": "c2ed64e3ff11b91a5afeef61b47548eab0d16aeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flash-global/connect-common/zipball/6df0bb2501833cbfbc8f1e6267427e0767e703b5",
-                "reference": "6df0bb2501833cbfbc8f1e6267427e0767e703b5",
+                "url": "https://api.github.com/repos/flash-global/connect-common/zipball/c2ed64e3ff11b91a5afeef61b47548eab0d16aeb",
+                "reference": "c2ed64e3ff11b91a5afeef61b47548eab0d16aeb",
                 "shasum": ""
             },
             "require": {
@@ -722,7 +734,7 @@
                 }
             ],
             "description": "Flash Connect common components",
-            "time": "2018-08-29 19:09:59"
+            "time": "2018-10-19T14:43:43+00:00"
         },
         {
             "name": "fei/entities",
@@ -749,7 +761,6 @@
                     "Fei\\Entity\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0"
             ],
@@ -761,7 +772,11 @@
                 }
             ],
             "description": "Entities descriptors and helpers",
-            "time": "2018-06-19 08:14:51"
+            "support": {
+                "source": "https://github.com/flash-global/entities/tree/v1.1.8",
+                "issues": "https://github.com/flash-global/entities/issues"
+            },
+            "time": "2018-06-19T08:14:51+00:00"
         },
         {
             "name": "fei/logger-client",
@@ -792,7 +807,6 @@
                     "Fei\\Service\\Logger\\Client\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0"
             ],
@@ -804,27 +818,32 @@
                 }
             ],
             "description": "Client side logger",
-            "time": "2018-03-16 09:27:44"
+            "support": {
+                "source": "https://github.com/flash-global/logger-client/tree/v1.2.11",
+                "issues": "https://github.com/flash-global/logger-client/issues"
+            },
+            "time": "2018-03-16T09:27:44+00:00"
         },
         {
             "name": "fei/logger-common",
-            "version": "v1.2.2",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flash-global/logger-common.git",
-                "reference": "52961bfaa3d110c3afe8823d672ac5993c62c76f"
+                "reference": "c0fbd72aa47afc3bfe0db296e43953eef5648ecd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flash-global/logger-common/zipball/52961bfaa3d110c3afe8823d672ac5993c62c76f",
-                "reference": "52961bfaa3d110c3afe8823d672ac5993c62c76f",
+                "url": "https://api.github.com/repos/flash-global/logger-common/zipball/c0fbd72aa47afc3bfe0db296e43953eef5648ecd",
+                "reference": "c0fbd72aa47afc3bfe0db296e43953eef5648ecd",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "1.*",
                 "doctrine/collections": "~1.2",
                 "fei/entities": "^1.0.3",
-                "league/fractal": "^0.14.0"
+                "league/fractal": "^0.14.0",
+                "php": "~7.0"
             },
             "require-dev": {
                 "codeception/codeception": "^2.2",
@@ -851,7 +870,7 @@
             "keywords": [
                 "logger"
             ],
-            "time": "2018-03-16 15:28:46"
+            "time": "2018-12-07T16:51:23+00:00"
         },
         {
             "name": "fei/translate-client",
@@ -899,7 +918,7 @@
                 }
             ],
             "description": "Flash applicative Translate - client component",
-            "time": "2018-12-10 08:06:24"
+            "time": "2018-12-10T08:06:24+00:00"
         },
         {
             "name": "fei/translate-common",
@@ -930,7 +949,6 @@
                     "Fei\\Service\\Translate\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0"
             ],
@@ -945,7 +963,11 @@
             "keywords": [
                 "translate"
             ],
-            "time": "2018-07-09 14:43:19"
+            "support": {
+                "source": "https://github.com/flash-global/translate-common/tree/v1.3.0",
+                "issues": "https://github.com/flash-global/translate-common/issues"
+            },
+            "time": "2018-07-09T14:43:19+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1010,7 +1032,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-04-22 15:46:56"
+            "time": "2018-04-22T15:46:56+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1061,36 +1083,37 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-12-20 10:07:11"
+            "time": "2016-12-20T10:07:11+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.2",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
+                "reference": "9f83dded91781a01c63574e387eaa769be769115"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
-                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
+                "reference": "9f83dded91781a01c63574e387eaa769be769115",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
-                "psr/http-message": "~1.0"
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -1120,13 +1143,14 @@
             "keywords": [
                 "http",
                 "message",
+                "psr-7",
                 "request",
                 "response",
                 "stream",
                 "uri",
                 "url"
             ],
-            "time": "2017-03-20 17:10:46"
+            "time": "2018-12-04T20:46:45+00:00"
         },
         {
             "name": "league/climate",
@@ -1187,7 +1211,7 @@
                 "php",
                 "terminal"
             ],
-            "time": "2018-04-29 16:43:54"
+            "time": "2018-04-29T16:43:54+00:00"
         },
         {
             "name": "league/fractal",
@@ -1250,7 +1274,7 @@
                 "league",
                 "rest"
             ],
-            "time": "2016-07-21 09:56:14"
+            "time": "2016-07-21T09:56:14+00:00"
         },
         {
             "name": "lightsaml/lightsaml",
@@ -1312,7 +1336,7 @@
                 "lightSAML",
                 "php"
             ],
-            "time": "2018-05-28 11:21:22"
+            "time": "2018-05-28T11:21:22+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -1358,7 +1382,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2018-02-13 20:26:39"
+            "time": "2018-02-13T20:26:39+00:00"
         },
         {
             "name": "objective-php/application",
@@ -1411,7 +1435,7 @@
                 "framework",
                 "objective php"
             ],
-            "time": "2018-03-19 13:46:56"
+            "time": "2018-03-19T13:46:56+00:00"
         },
         {
             "name": "objective-php/cli",
@@ -1459,7 +1483,7 @@
                 "cli",
                 "objective php"
             ],
-            "time": "2018-09-10 09:58:20"
+            "time": "2018-09-10T09:58:20+00:00"
         },
         {
             "name": "objective-php/components",
@@ -1507,7 +1531,7 @@
                 "objective php",
                 "primitives"
             ],
-            "time": "2017-06-23 11:40:23"
+            "time": "2017-06-23T11:40:23+00:00"
         },
         {
             "name": "objective-php/config",
@@ -1555,7 +1579,7 @@
                 "config",
                 "objective-php"
             ],
-            "time": "2017-09-06 09:34:52"
+            "time": "2017-09-06T09:34:52+00:00"
         },
         {
             "name": "objective-php/data-processor",
@@ -1607,7 +1631,7 @@
                 "data procesosr",
                 "objective php"
             ],
-            "time": "2016-05-05 15:32:33"
+            "time": "2016-05-05T15:32:33+00:00"
         },
         {
             "name": "objective-php/events-handler",
@@ -1656,7 +1680,7 @@
                 "events handler",
                 "objective php"
             ],
-            "time": "2017-10-09 11:50:38"
+            "time": "2017-10-09T11:50:38+00:00"
         },
         {
             "name": "objective-php/html",
@@ -1704,7 +1728,7 @@
                 "html",
                 "objective php"
             ],
-            "time": "2017-09-04 11:03:52"
+            "time": "2017-09-04T11:03:52+00:00"
         },
         {
             "name": "objective-php/invokable",
@@ -1752,7 +1776,7 @@
                 "invokable",
                 "objective php"
             ],
-            "time": "2017-06-29 12:46:13"
+            "time": "2017-06-29T12:46:13+00:00"
         },
         {
             "name": "objective-php/matcher",
@@ -1798,7 +1822,7 @@
                 "matcher",
                 "objective php"
             ],
-            "time": "2018-01-08 15:44:02"
+            "time": "2018-01-08T15:44:02+00:00"
         },
         {
             "name": "objective-php/message",
@@ -1840,7 +1864,7 @@
                 }
             ],
             "description": "ObjectivePHP implementation for PSR-7",
-            "time": "2018-01-25 16:29:35"
+            "time": "2018-01-25T16:29:35+00:00"
         },
         {
             "name": "objective-php/notification",
@@ -1893,7 +1917,7 @@
                 "components",
                 "objective php"
             ],
-            "time": "2017-04-26 16:31:48"
+            "time": "2017-04-26T16:31:48+00:00"
         },
         {
             "name": "objective-php/phpunit-extension",
@@ -1938,7 +1962,7 @@
                 "objective php",
                 "phpunit"
             ],
-            "time": "2016-05-05 12:55:53"
+            "time": "2016-05-05T12:55:53+00:00"
         },
         {
             "name": "objective-php/primitives",
@@ -1992,7 +2016,7 @@
                 "objective php",
                 "primitives"
             ],
-            "time": "2017-09-04 12:32:58"
+            "time": "2017-09-04T12:32:58+00:00"
         },
         {
             "name": "objective-php/router",
@@ -2040,7 +2064,7 @@
                 "objective php",
                 "router"
             ],
-            "time": "2018-01-11 11:06:20"
+            "time": "2018-01-11T11:06:20+00:00"
         },
         {
             "name": "objective-php/services-factory",
@@ -2096,7 +2120,7 @@
                 "objective php",
                 "services"
             ],
-            "time": "2018-01-19 15:12:57"
+            "time": "2018-01-19T15:12:57+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2141,7 +2165,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-07-02 15:55:56"
+            "time": "2018-07-02T15:55:56+00:00"
         },
         {
             "name": "pda/pheanstalk",
@@ -2191,7 +2215,7 @@
             "keywords": [
                 "beanstalkd"
             ],
-            "time": "2018-09-19 12:16:28"
+            "time": "2018-09-19T12:16:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2245,7 +2269,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2017-09-11 18:02:19"
+            "time": "2017-09-11T18:02:19+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2296,7 +2320,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-30 07:14:17"
+            "time": "2017-11-30T07:14:17+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -2343,20 +2367,20 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2017-07-14 14:27:02"
+            "time": "2017-07-14T14:27:02+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.11",
+            "version": "2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "7053f06f91b3de78e143d430e55a8f7889efc08b"
+                "reference": "8814dc7841db159daed0b32c2b08fb7e03c6afe7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/7053f06f91b3de78e143d430e55a8f7889efc08b",
-                "reference": "7053f06f91b3de78e143d430e55a8f7889efc08b",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/8814dc7841db159daed0b32c2b08fb7e03c6afe7",
+                "reference": "8814dc7841db159daed0b32c2b08fb7e03c6afe7",
                 "shasum": ""
             },
             "require": {
@@ -2435,7 +2459,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2018-04-15 16:55:05"
+            "time": "2018-11-04T05:45:48+00:00"
         },
         {
             "name": "psr/cache",
@@ -2481,7 +2505,7 @@
                 "psr",
                 "psr-6"
             ],
-            "time": "2016-08-06 20:24:11"
+            "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/container",
@@ -2530,7 +2554,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14 16:28:37"
+            "time": "2017-02-14T16:28:37+00:00"
         },
         {
             "name": "psr/http-message",
@@ -2580,20 +2604,20 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
                 "shasum": ""
             },
             "require": {
@@ -2627,7 +2651,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2018-11-20T15:27:04+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -2675,27 +2699,65 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "time": "2017-10-23 01:57:42"
+            "time": "2017-10-23T01:57:42+00:00"
         },
         {
-            "name": "robrichards/xmlseclibs",
-            "version": "3.0.1",
+            "name": "ralouphie/getallheaders",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/robrichards/xmlseclibs.git",
-                "reference": "d937712f70f93a584eb0299ccd87dc6374003781"
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/d937712f70f93a584eb0299ccd87dc6374003781",
-                "reference": "d937712f70f93a584eb0299ccd87dc6374003781",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
                 "shasum": ""
             },
             "require": {
-                "php": ">= 5.4"
+                "php": ">=5.3"
             },
-            "suggest": {
-                "ext-openssl": "OpenSSL extension"
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0",
+                "satooshi/php-coveralls": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2016-02-11T07:05:27+00:00"
+        },
+        {
+            "name": "robrichards/xmlseclibs",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/xmlseclibs.git",
+                "reference": "406c68ac9124db033d079284b719958b829cb830"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/406c68ac9124db033d079284b719958b829cb830",
+                "reference": "406c68ac9124db033d079284b719958b829cb830",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": ">= 5.4"
             },
             "type": "library",
             "autoload": {
@@ -2715,7 +2777,7 @@
                 "xml",
                 "xmldsig"
             ],
-            "time": "2017-08-31 09:27:07"
+            "time": "2018-11-15T11:59:02+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -2763,7 +2825,7 @@
                 "input",
                 "prompt"
             ],
-            "time": "2017-03-18 11:32:45"
+            "time": "2017-03-18T11:32:45+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -2814,20 +2876,20 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-09-23 23:08:17"
+            "time": "2018-09-23T23:08:17+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.4.15",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "b2e1f19280c09a42dc64c0b72b80fe44dd6e88fb"
+                "reference": "cc35e84adbb15c26ae6868e1efbf705a917be6b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b2e1f19280c09a42dc64c0b72b80fe44dd6e88fb",
-                "reference": "b2e1f19280c09a42dc64c0b72b80fe44dd6e88fb",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/cc35e84adbb15c26ae6868e1efbf705a917be6b5",
+                "reference": "cc35e84adbb15c26ae6868e1efbf705a917be6b5",
                 "shasum": ""
             },
             "require": {
@@ -2877,20 +2939,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 09:06:28"
+            "time": "2018-11-30T18:07:24+00:00"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.15",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "2fb33cb6eefe6e790e4023f7c534a9e4214252fc"
+                "reference": "ea61dd57c4399b0b2a4162e1820cd9d0783acd38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/2fb33cb6eefe6e790e4023f7c534a9e4214252fc",
-                "reference": "2fb33cb6eefe6e790e4023f7c534a9e4214252fc",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/ea61dd57c4399b0b2a4162e1820cd9d0783acd38",
+                "reference": "ea61dd57c4399b0b2a4162e1820cd9d0783acd38",
                 "shasum": ""
             },
             "require": {
@@ -2931,20 +2993,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-27 17:45:33"
+            "time": "2018-11-26T10:17:44+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8"
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d0cd638f4634c16d8df4508e847f14e9e43168b8",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
                 "shasum": ""
             },
             "require": {
@@ -2990,20 +3052,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06 14:22:27"
+            "time": "2018-09-21T13:07:52+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "1e24b0c4a56d55aaf368763a06c6d1c7d3194934"
+                "reference": "6b88000cdd431cd2e940caa2cb569201f3f84224"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/1e24b0c4a56d55aaf368763a06c6d1c7d3194934",
-                "reference": "1e24b0c4a56d55aaf368763a06c6d1c7d3194934",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/6b88000cdd431cd2e940caa2cb569201f3f84224",
+                "reference": "6b88000cdd431cd2e940caa2cb569201f3f84224",
                 "shasum": ""
             },
             "require": {
@@ -3049,7 +3111,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06 14:22:27"
+            "time": "2018-09-21T06:26:08+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -3099,7 +3161,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-01-29 19:49:41"
+            "time": "2018-01-29T19:49:41+00:00"
         },
         {
             "name": "zendframework/zend-cache",
@@ -3182,7 +3244,7 @@
                 "psr-6",
                 "zf"
             ],
-            "time": "2018-05-01 21:58:00"
+            "time": "2018-05-01T21:58:00+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -3246,7 +3308,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2018-09-05 19:29:37"
+            "time": "2018-09-05T19:29:37+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -3300,7 +3362,7 @@
                 "events",
                 "zf2"
             ],
-            "time": "2018-04-25 15:33:34"
+            "time": "2018-04-25T15:33:34+00:00"
         },
         {
             "name": "zendframework/zend-permissions-acl",
@@ -3349,7 +3411,7 @@
                 "acl",
                 "zf"
             ],
-            "time": "2018-05-01 21:53:20"
+            "time": "2018-05-01T21:53:20+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -3417,7 +3479,7 @@
                 "servicemanager",
                 "zf"
             ],
-            "time": "2018-01-29 16:48:37"
+            "time": "2018-01-29T16:48:37+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -3463,7 +3525,7 @@
                 "stdlib",
                 "zf"
             ],
-            "time": "2018-08-28 21:34:05"
+            "time": "2018-08-28T21:34:05+00:00"
         }
     ],
     "packages-dev": [],
@@ -3472,6 +3534,11 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": []
+    "platform": {
+        "php": ">=7.0"
+    },
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.0.32"
+    }
 }
