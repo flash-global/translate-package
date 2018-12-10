@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b72289afefb4281b99ca0042481cbd6a",
+    "content-hash": "ca7dde6f147b9725fef6976e7a42099d",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -640,7 +640,7 @@
             "version": "v3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/flash-global/connect-client.git",
+                "url": "git@github.com:flash-global/connect-client",
                 "reference": "593d2db0a55c271ec4827e001cdb0e24d1269751"
             },
             "dist": {
@@ -826,23 +826,24 @@
         },
         {
             "name": "fei/logger-common",
-            "version": "v1.2.2",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flash-global/logger-common.git",
-                "reference": "52961bfaa3d110c3afe8823d672ac5993c62c76f"
+                "reference": "c0fbd72aa47afc3bfe0db296e43953eef5648ecd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flash-global/logger-common/zipball/52961bfaa3d110c3afe8823d672ac5993c62c76f",
-                "reference": "52961bfaa3d110c3afe8823d672ac5993c62c76f",
+                "url": "https://api.github.com/repos/flash-global/logger-common/zipball/c0fbd72aa47afc3bfe0db296e43953eef5648ecd",
+                "reference": "c0fbd72aa47afc3bfe0db296e43953eef5648ecd",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "1.*",
                 "doctrine/collections": "~1.2",
                 "fei/entities": "^1.0.3",
-                "league/fractal": "^0.14.0"
+                "league/fractal": "^0.14.0",
+                "php": "~7.0"
             },
             "require-dev": {
                 "codeception/codeception": "^2.2",
@@ -854,6 +855,7 @@
                     "Fei\\Service\\Logger\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0"
             ],
@@ -868,25 +870,15 @@
             "keywords": [
                 "logger"
             ],
-            "support": {
-                "source": "https://github.com/flash-global/logger-common/tree/v1.2.2",
-                "issues": "https://github.com/flash-global/logger-common/issues"
-            },
-            "time": "2018-03-16T15:28:46+00:00"
+            "time": "2018-12-07T16:51:23+00:00"
         },
         {
             "name": "fei/translate-client",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/flash-global/translate-client.git",
-                "reference": "5036a07cf8c8db6995bf7e20680db7454b5d4b62"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/flash-global/translate-client/zipball/5036a07cf8c8db6995bf7e20680db7454b5d4b62",
-                "reference": "5036a07cf8c8db6995bf7e20680db7454b5d4b62",
-                "shasum": ""
+                "url": "git@github.com:flash-global/translate-client",
+                "reference": "879755c2bec1e8eec06f8c50594d86ea49d1e018"
             },
             "require": {
                 "doctrine/common": "^2.6.1",
@@ -926,11 +918,7 @@
                 }
             ],
             "description": "Flash applicative Translate - client component",
-            "support": {
-                "source": "https://github.com/flash-global/translate-client/tree/v1.2.0",
-                "issues": "https://github.com/flash-global/translate-client/issues"
-            },
-            "time": "2018-11-22T13:28:03+00:00"
+            "time": "2018-12-10T08:06:24+00:00"
         },
         {
             "name": "fei/translate-common",
