@@ -2,14 +2,11 @@
 
 namespace Fei\Service\Translate\Package;
 
-use Fei\ApiClient\AbstractApiClient;
 use Fei\ApiClient\Transport\BasicTransport;
 use Fei\ApiClient\Transport\SyncTransportInterface;
 use Fei\Service\Connect\Client\Connect;
 use Fei\Service\Connect\Common\Entity\User;
 use Fei\Service\Translate\Client\Translate;
-use Fei\Service\Translate\Package\Config\TranslateAuthorization;
-use Fei\Service\Translate\Package\Config\TranslateBaseUrl;
 use Fei\Service\Translate\Package\Config\TranslateParam;
 use ObjectivePHP\Application\ApplicationInterface;
 use ObjectivePHP\Cli\Config\CliCommand;
@@ -51,10 +48,8 @@ class TranslatePackage
 
     public function __invoke(ApplicationInterface $app)
     {
-        $config = $app->getConfig();
-
-        $params = $config->subset(TranslateParam::class);
-        $config->import(new CliCommand(new TranslateCli()));
+        $params = $app->getConfig()->subset(TranslateParam::class);
+        $app->getConfig()->import(new CliCommand(new TranslateCli()));
 
         // Create translate directory
         if (!is_dir($params->get('translate_directory'))) {
@@ -66,19 +61,6 @@ class TranslatePackage
                     $logger->notify($e->getMessage());
                 }
             }
-        }
-
-        if (!$config->has(TranslateBaseUrl::class)) {
-            throw new \Exception('Parameter Base URL for Bid Package does not exist');
-        }
-
-        $baseUrl = $config->get(TranslateBaseUrl::class);
-        $param = [
-            AbstractApiClient::OPTION_BASEURL => $baseUrl
-        ];
-
-        if ($config->has(TranslateAuthorization::class)) {
-            $param[AbstractApiClient::OPTION_HEADER_AUTHORIZATION] = $config->get(TranslateAuthorization::class);
         }
 
         $service = [
