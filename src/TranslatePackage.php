@@ -32,6 +32,13 @@ class TranslatePackage
     /** @var string */
     protected $logger;
 
+    /** @var array $languageMapping */
+    protected $languageMapping = [
+        'en' => 'en_GB',
+        'fr' => 'fr_FR',
+        'de' => 'de_DE'
+    ];
+
     /**
      * LoggerClientPackage constructor.
      * @param string $serviceIdentifier
@@ -88,7 +95,9 @@ class TranslatePackage
                     /** @var Connect $client */
                     $client = $servicesFactory->get($this->connectClientIdentifier);
                     if ($client->getUser() instanceof User) {
-                        $translate->setLang($client->getUser()->getLanguage());
+                        if (!empty($language = $this->languageMapping[$client->getUser()->getLanguage()])) {
+                            $translate->setLang($language);
+                        }
                     }
                 } elseif ($params->get('translate_lang')) {
                     $translate->setLang($params->get('translate_lang'));
